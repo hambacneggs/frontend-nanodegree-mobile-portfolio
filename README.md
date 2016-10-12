@@ -19,4 +19,4 @@ To view the optimized pizzeria page, go to [https://hambacneggs.github.io/fronte
 
 #### pizza.html and main.js
 - Rewrote changePizzaSizes function (also removed determineDx function). Instead of looping through and styling each div with JS, the new code changes the class on the parent element #randomPizzas and that changes the size of the child elements via CSS (using new styles in style.css).
-- Edited updatePositions to fix the Forced Synchronous Layout. Having a reference to `document.body.scrolltop` in the for loop was causing the issue, so I moved it to outside of the loop.
+- Edited updatePositions to fix the Forced Synchronous Layout. Having a reference to `document.body.scrolltop` in the for loop was causing the issue, so I moved it to outside of the loop. After review, I also made some optimizations such as using `getElementById` instead of `querySelector`. Also moving variable creation to outside of the for loop.
